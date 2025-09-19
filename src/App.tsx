@@ -40,18 +40,49 @@ function App() {
       {/* Header/Navigation */}
       <header className="container mx-auto py-6 px-4 flex justify-between items-center">
   {/* Move "BlockchainDev" slightly to the right on desktop */}
-  <div className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 md:ml-8">
-    BlockchainDev
-  </div>
+  {/* <div className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 md:ml-8">
+    MohanKotte
+  </div> */}
+  <div className="text-3xl font-bold md:ml-8">
+  <span className="text-gray-300">
+    <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400">
+      M
+    </span>
+    ohan
+  </span>
+  <span className="text-gray-300">
+    <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400">
+      K
+    </span>
+    otte
+  </span>
+</div>
 
   {/* Navigation links (centered) */}
-  <nav className="text-xl hidden md:flex space-x-8">
-    <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="hover:text-cyan-400 transition-colors">About</a>
-    <a href="#skills" onClick={(e) => handleNavClick(e, 'skills')} className="hover:text-cyan-400 transition-colors">Skills</a>
-    <a href="#services" onClick={(e) => handleNavClick(e, 'services')} className="hover:text-cyan-400 transition-colors">Services</a>
-    <a href="#projects" onClick={(e) => handleNavClick(e, 'projects')} className="hover:text-cyan-400 transition-colors">Projects</a>
-    <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="hover:text-cyan-400 transition-colors">Contact</a>
-  </nav>
+<nav className="text-xl hidden md:flex space-x-8">
+  {/* The relative positioning is key for the absolute bar */}
+  <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="relative group hover:text-cyan-400 transition-colors">
+    About
+    {/* The animated bar */}
+    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300 group-hover:w-full"></span>
+  </a>
+  <a href="#skills" onClick={(e) => handleNavClick(e, 'skills')} className="relative group hover:text-cyan-400 transition-colors">
+    Skills
+    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300 group-hover:w-full"></span>
+  </a>
+  <a href="#services" onClick={(e) => handleNavClick(e, 'services')} className="relative group hover:text-cyan-400 transition-colors">
+    Services
+    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300 group-hover:w-full"></span>
+  </a>
+  <a href="#projects" onClick={(e) => handleNavClick(e, 'projects')} className="relative group hover:text-cyan-400 transition-colors">
+    Projects
+    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300 group-hover:w-full"></span>
+  </a>
+  <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="relative group hover:text-cyan-400 transition-colors">
+    Contact
+    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300 group-hover:w-full"></span>
+  </a>
+</nav>
 
   {/* Move GitHub and LinkedIn icons slightly to the left on desktop */}
   <div className="flex space-x-4 md:mr-8">
@@ -75,10 +106,10 @@ function App() {
     transition={{ duration: 0.8, ease: "easeOut" }} // Animation duration and easing
   >
    <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-  Blockchain Developer & <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400">Web3 Enthusiast</span>
+  Blockchain Developer & <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400">Software Tester(QA)</span>
 </h1>
 <p className="text-lg text-gray-300 mb-5">
-  Building the decentralized future with smart contracts, DApps, and blockchain solutions.
+ Building and testing decentralized applications that are secure, efficient, and reliable.
 </p>
 <p className="text-lg text-gray-300 mb-8 font-semibold italic border-l-4 border-cyan-400 pl-4">
   🌟 "Think. Research. Implement. Contribute. – The TRIC Method I Live By." 🌟
@@ -122,156 +153,13 @@ function App() {
     </div>
   </motion.div>
 </section>
-      {/* About Section */}
-      <section id="about" className="py-20 bg-indigo-950/50">
-  <div className="container mx-auto px-4">
-    {/* Section Title */}
-    <h2 className="text-3xl font-bold mb-12 text-center reveal">
-      <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400">
-        About Me
-      </span>
-    </h2>
-
-    {/* Content Container */}
-    <div className="max-w-3xl mx-auto text-gray-300 space-y-6 text-lg reveal">
-      {/* Paragraph 1 */}
-      <div className="p-6 rounded-lg border border-transparent bg-gradient-to-br from-indigo-950 via-purple-900 to-violet-950 hover:border-cyan-400/50 transition-all duration-300">
-        <p>
-          I'm a passionate <span className="font-semibold text-cyan-400">Blockchain Developer</span> with expertise in <span className="font-semibold text-purple-400">smart contract development</span>, <span className="font-semibold text-cyan-400">Web3 integration</span>, and <span className="font-semibold text-purple-400">decentralized applications (DApps)</span>. I've mastered <span className="font-semibold text-cyan-400">Ethereum, Solidity, Foundry, Truffle, and Hardhat</span>.
-        </p>
-      </div>
-
-      {/* Paragraph 2 */}
-      <div className="p-6 rounded-lg border border-transparent bg-gradient-to-br from-indigo-950 via-purple-900 to-violet-950 hover:border-cyan-400/50 transition-all duration-300">
-        <p>
-          I thrive on exploring <span className="font-semibold text-cyan-400">DeFi, NFTs, and Hyperledger</span>, pushing the boundaries of decentralized technology. From building <span className="font-semibold text-purple-400">blockchain-powered smart lock access control</span> to developing <span className="font-semibold text-cyan-400">secure voting and healthcare systems</span>, I bring innovative <span className="font-semibold text-purple-400">Web3 solutions</span> to life.
-        </p>
-      </div>
-
-      {/* Paragraph 3 */}
-      <div className="p-6 rounded-lg border border-transparent bg-gradient-to-br from-indigo-950 via-purple-900 to-violet-950 hover:border-cyan-400/50 transition-all duration-300">
-        <p>
-          As an <span className="font-semibold text-cyan-400">Alchemy Certified Ethereum Developer</span>, I combine deep blockchain knowledge with advanced <span className="font-semibold text-purple-400">smart contract skills</span>. Beyond coding, I'm a <span className="font-semibold text-cyan-400">blockchain trainer</span> at <span className="font-semibold text-purple-400">Data Valley</span>, empowering others to embrace the future of digitalization.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-      {/* Skills Section */}
-      <section id="skills" className="py-20">
-  <div className="container mx-auto px-4">
-    {/* Section Title */}
-    <h2 className="text-3xl font-bold mb-12 text-center reveal">
-      <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400">
-        Skills & Expertise
-      </span>
-    </h2>
-
-    {/* Skill Cards Grid */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {/* Skill Category 1 */}
-      <div className="bg-indigo-900/30 backdrop-blur-sm p-6 rounded-xl border border-indigo-800/50 hover:border-cyan-500/50 transition-all hover:shadow-lg hover:shadow-cyan-500/10 skill-card reveal">
-        <div className="bg-gradient-to-br from-cyan-500 to-blue-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-          <Code size={24} />
-        </div>
-        <h3 className="text-xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-400">
-          Blockchain & Smart Contracts
-        </h3>
-        <ul className="space-y-2 text-gray-300">
-          <li className="flex items-center hover:text-cyan-400 transition-colors">
-            <span className="text-cyan-400 mr-2">✓</span> Solidity, Ethereum, Hyperledger Fabric
-          </li>
-          <li className="flex items-center hover:text-cyan-400 transition-colors">
-            <span className="text-cyan-400 mr-2">✓</span> Smart Contract Development & Auditing
-          </li>
-          <li className="flex items-center hover:text-cyan-400 transition-colors">
-            <span className="text-cyan-400 mr-2">✓</span> ERC-20, ERC-721, ERC-1155 Token Standards
-          </li>
-          <li className="flex items-center hover:text-cyan-400 transition-colors">
-            <span className="text-cyan-400 mr-2">✓</span> Chainlink Oracles & Automation
-          </li>
-          <li className="flex items-center hover:text-cyan-400 transition-colors">
-            <span className="text-cyan-400 mr-2">✓</span> Foundry, Truffle, Hardhat
-          </li>
-        </ul>
-      </div>
-
-      {/* Skill Category 2 */}
-      <div className="bg-indigo-900/30 backdrop-blur-sm p-6 rounded-xl border border-indigo-800/50 hover:border-cyan-500/50 transition-all hover:shadow-lg hover:shadow-cyan-500/10 skill-card reveal">
-        <div className="bg-gradient-to-br from-purple-500 to-pink-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-          <Layers size={24} />
-        </div>
-        <h3 className="text-xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
-          DApp Development
-        </h3>
-        <ul className="space-y-2 text-gray-300">
-          <li className="flex items-center hover:text-cyan-400 transition-colors">
-            <span className="text-cyan-400 mr-2">✓</span> Web3.js & Ethers.js
-          </li>
-          <li className="flex items-center hover:text-cyan-400 transition-colors">
-            <span className="text-cyan-400 mr-2">✓</span> React.js & Next.js
-          </li>
-          <li className="flex items-center hover:text-cyan-400 transition-colors">
-            <span className="text-cyan-400 mr-2">✓</span> IPFS & Decentralized Storage
-          </li>
-          <li className="flex items-center hover:text-cyan-400 transition-colors">
-            <span className="text-cyan-400 mr-2">✓</span> Metamask & Wallet Integration
-          </li>
-        </ul>
-      </div>
-
-      {/* Skill Category 3 */}
-      <div className="bg-indigo-900/30 backdrop-blur-sm p-6 rounded-xl border border-indigo-800/50 hover:border-cyan-500/50 transition-all hover:shadow-lg hover:shadow-cyan-500/10 skill-card reveal">
-        <div className="bg-gradient-to-br from-blue-500 to-indigo-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-          <Database size={24} />
-        </div>
-        <h3 className="text-xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-400">
-          DeFi & NFT Projects
-        </h3>
-        <ul className="space-y-2 text-gray-300">
-          <li className="flex items-center hover:text-cyan-400 transition-colors">
-            <span className="text-cyan-400 mr-2">✓</span> Liquidity Pools & Yield Farming
-          </li>
-          <li className="flex items-center hover:text-cyan-400 transition-colors">
-            <span className="text-cyan-400 mr-2">✓</span> NFT Metadata Storage (IPFS & On-Chain SVGs)
-          </li>
-          <li className="flex items-center hover:text-cyan-400 transition-colors">
-            <span className="text-cyan-400 mr-2">✓</span> Smart Contract Security & Fuzz Testing
-          </li>
-        </ul>
-      </div>
-
-      {/* Skill Category 4 */}
-      <div className="bg-indigo-900/30 backdrop-blur-sm p-6 rounded-xl border border-indigo-800/50 hover:border-cyan-500/50 transition-all hover:shadow-lg hover:shadow-cyan-500/10 skill-card reveal">
-        <div className="bg-gradient-to-br from-teal-500 to-green-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-          <Shield size={24} />
-        </div>
-        <h3 className="text-xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-green-400">
-          Other Technologies
-        </h3>
-        <ul className="space-y-2 text-gray-300">
-          <li className="flex items-center hover:text-cyan-400 transition-colors">
-            <span className="text-cyan-400 mr-2">✓</span> Node.js, Express.js
-          </li>
-          <li className="flex items-center hover:text-cyan-400 transition-colors">
-            <span className="text-cyan-400 mr-2">✓</span> Docker, WSL, Linux
-          </li>
-          <li className="flex items-center hover:text-cyan-400 transition-colors">
-            <span className="text-cyan-400 mr-2">✓</span> GraphQL, Firebase, MongoDB
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-      {/* Professional Services Section */}
+ {/* Professional Services Section */}
       <section id="services" className="py-20 bg-indigo-950/50">
   <div className="container mx-auto px-4">
     {/* Section Title */}
     <h2 className="text-3xl font-bold mb-12 text-center reveal">
       <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400">
-        Professional Services
+        Services by MK
       </span>
     </h2>
 
@@ -412,6 +300,156 @@ function App() {
         </div>
       </section>
 
+      {/* About Section */}
+      <section id="about" className="py-20 bg-indigo-950/50">
+  <div className="container mx-auto px-4">
+    {/* Section Title */}
+    <h2 className="text-3xl font-bold mb-12 text-center reveal">
+      <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400">
+        Professional Summary
+      </span>
+    </h2>
+
+    {/* Content Container */}
+    <div className="max-w-3xl mx-auto text-gray-300 space-y-6 text-lg reveal">
+      {/* Paragraph 1 */}
+      <div className="p-6 rounded-lg border border-transparent bg-gradient-to-br from-indigo-950 via-purple-900 to-violet-950 hover:border-cyan-400/50 transition-all duration-300">
+        <p>
+          A solution-oriented <span className="font-semibold text-cyan-400">Blockchain Developer and former Blockchain Trainer</span> with a robust portfolio of dApps. <span className="font-semibold text-purple-400">My expertise lies in</span>, <span className="font-semibold text-cyan-400">designing, developing</span>, and <span className="font-semibold text-purple-400">auditing secure smart contracts using Foundry and Hardhat</span>, combined with a unique ability to <span className="font-semibold text-cyan-400">clearly articulate complex technical concepts.</span>.
+        </p>
+      </div>
+
+      {/* Paragraph 2 */}
+      <div className="p-6 rounded-lg border border-transparent bg-gradient-to-br from-indigo-950 via-purple-900 to-violet-950 hover:border-cyan-400/50 transition-all duration-300">
+        <p>
+          I thrive on exploring <span className="font-semibold text-cyan-400">DeFi, NFTs, and Hyperledger</span>, pushing the boundaries of decentralized technology. From building <span className="font-semibold text-purple-400">blockchain-powered smart lock access control</span> to developing <span className="font-semibold text-cyan-400">secure voting and healthcare systems</span>, I bring innovative <span className="font-semibold text-purple-400">Web3 solutions</span> to life.
+        </p>
+      </div>
+
+      {/* Paragraph 3 */}
+      <div className="p-6 rounded-lg border border-transparent bg-gradient-to-br from-indigo-950 via-purple-900 to-violet-950 hover:border-cyan-400/50 transition-all duration-300">
+        <p>
+          As an <span className="font-semibold text-cyan-400">Alchemy Certified Ethereum Developer</span>, I combine deep blockchain knowledge with advanced <span className="font-semibold text-purple-400">smart contract skills</span>. Beyond coding, I'm a <span className="font-semibold text-cyan-400">blockchain trainer</span> at <span className="font-semibold text-purple-400">Data Valley</span>, empowering others to embrace the future of digitalization.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      {/* Skills Section */}
+      <section id="skills" className="py-20">
+  <div className="container mx-auto px-4">
+    {/* Section Title */}
+    <h2 className="text-3xl font-bold mb-12 text-center reveal">
+      <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400">
+        Skills & Expertise
+      </span>
+    </h2>
+
+    {/* Skill Cards Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Skill Category 1 */}
+      <div className="bg-indigo-900/30 backdrop-blur-sm p-6 rounded-xl border border-indigo-800/50 hover:border-cyan-500/50 transition-all hover:shadow-lg hover:shadow-cyan-500/10 skill-card reveal">
+        <div className="bg-gradient-to-br from-cyan-500 to-blue-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+          <Code size={24} />
+        </div>
+        <h3 className="text-xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-400">
+          Blockchain & Smart Contracts
+        </h3>
+        <ul className="space-y-2 text-gray-300">
+          <li className="flex items-center hover:text-cyan-400 transition-colors">
+            <span className="text-cyan-400 mr-2">✓</span> Solidity, Ethereum, Hyperledger Fabric
+          </li>
+          <li className="flex items-center hover:text-cyan-400 transition-colors">
+            <span className="text-cyan-400 mr-2">✓</span> Smart Contract Development & Auditing
+          </li>
+          <li className="flex items-center hover:text-cyan-400 transition-colors">
+            <span className="text-cyan-400 mr-2">✓</span> ERC-20, ERC-721, ERC-1155 Token Standards
+          </li>
+          <li className="flex items-center hover:text-cyan-400 transition-colors">
+            <span className="text-cyan-400 mr-2">✓</span> Chainlink Oracles & Automation
+          </li>
+          <li className="flex items-center hover:text-cyan-400 transition-colors">
+            <span className="text-cyan-400 mr-2">✓</span> Foundry, Truffle, Hardhat
+          </li>
+          <li className="flex items-center hover:text-cyan-400 transition-colors">
+            <span className="text-cyan-400 mr-2">✓</span> Gas Optimization With Zksync
+          </li>
+        </ul>
+      </div>
+
+      {/* Skill Category 2 */}
+      <div className="bg-indigo-900/30 backdrop-blur-sm p-6 rounded-xl border border-indigo-800/50 hover:border-cyan-500/50 transition-all hover:shadow-lg hover:shadow-cyan-500/10 skill-card reveal">
+        <div className="bg-gradient-to-br from-purple-500 to-pink-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+          <Layers size={24} />
+        </div>
+        <h3 className="text-xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
+          DApp Development
+        </h3>
+        <ul className="space-y-2 text-gray-300">
+          <li className="flex items-center hover:text-cyan-400 transition-colors">
+            <span className="text-cyan-400 mr-2">✓</span> Web3.js & Ethers.js
+          </li>
+          <li className="flex items-center hover:text-cyan-400 transition-colors">
+            <span className="text-cyan-400 mr-2">✓</span> React.js & Next.js
+          </li>
+          <li className="flex items-center hover:text-cyan-400 transition-colors">
+            <span className="text-cyan-400 mr-2">✓</span> IPFS & Decentralized Storage
+          </li>
+          <li className="flex items-center hover:text-cyan-400 transition-colors">
+            <span className="text-cyan-400 mr-2">✓</span> Metamask & Wallet Integration
+          </li>
+        </ul>
+      </div>
+
+      {/* Skill Category 3 */}
+      <div className="bg-indigo-900/30 backdrop-blur-sm p-6 rounded-xl border border-indigo-800/50 hover:border-cyan-500/50 transition-all hover:shadow-lg hover:shadow-cyan-500/10 skill-card reveal">
+        <div className="bg-gradient-to-br from-blue-500 to-indigo-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+          <Database size={24} />
+        </div>
+        <h3 className="text-xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-400">
+          DeFi & NFT Projects
+        </h3>
+        <ul className="space-y-2 text-gray-300">
+          <li className="flex items-center hover:text-cyan-400 transition-colors">
+            <span className="text-cyan-400 mr-2">✓</span> Liquidity Pools & Yield Farming
+          </li>
+          <li className="flex items-center hover:text-cyan-400 transition-colors">
+            <span className="text-cyan-400 mr-2">✓</span> NFT Metadata Storage (IPFS & On-Chain SVGs)
+          </li>
+          <li className="flex items-center hover:text-cyan-400 transition-colors">
+            <span className="text-cyan-400 mr-2">✓</span> Smart Contract Security & Fuzz Testing
+          </li>
+        </ul>
+      </div>
+
+      {/* Skill Category 4 */}
+      <div className="bg-indigo-900/30 backdrop-blur-sm p-6 rounded-xl border border-indigo-800/50 hover:border-cyan-500/50 transition-all hover:shadow-lg hover:shadow-cyan-500/10 skill-card reveal">
+        <div className="bg-gradient-to-br from-teal-500 to-green-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+          <Shield size={24} />
+        </div>
+        <h3 className="text-xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-green-400">
+          Other Technologies
+        </h3>
+        <ul className="space-y-2 text-gray-300">
+          <li className="flex items-center hover:text-cyan-400 transition-colors">
+            <span className="text-cyan-400 mr-2">✓</span> Node.js, Express.js
+          </li>
+          <li className="flex items-center hover:text-cyan-400 transition-colors">
+            <span className="text-cyan-400 mr-2">✓</span> Docker, WSL, Linux
+          </li>
+          <li className="flex items-center hover:text-cyan-400 transition-colors">
+            <span className="text-cyan-400 mr-2">✓</span> GraphQL, Firebase, MongoDB
+          </li>
+          <li className="flex items-center hover:text-cyan-400 transition-colors">
+            <span className="text-cyan-400 mr-2">✓</span> PlayWright (QA Automation Testing)
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+     
       {/* Projects Section */}
       <section id="projects" className="py-20">
         <div className="container mx-auto px-4">
